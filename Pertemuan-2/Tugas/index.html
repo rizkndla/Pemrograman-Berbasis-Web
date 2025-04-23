@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: white; /* background halaman */
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #ffe6f0; /* kotak pink muda */
+            padding: 20px 40px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .form-container p {
+            margin: 10px 0;
+        }
+
+        input[type="text"],
+        select,
+        input[type="file"] {
+            margin-left: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #ff99cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff66b2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+
+        <p>Nama: <input type="text" name="username" placeholder="Nama"></p>
+
+        <p>Email: <input type="text" name="email" placeholder="Email"></p>
+
+        <p>Jenis Kelamin:
+            <input type="radio" name="gender" value="male">Laki-laki
+            <input type="radio" name="gender" value="female">Perempuan
+        </p>
+
+        <p>Hobi:
+            <input type="checkbox" name="hobi" value="musik">Musik
+            <input type="checkbox" name="hobi" value="olahraga">Olahraga
+        </p>
+
+        <p>Pilih Kota:
+            <select name="pilihan">
+                <option value="1">Jakarta</option>
+                <option value="2">Karawang</option>
+                <option value="3">Bekasi</option>
+                <option value="4">Purwakarta</option>
+            </select>
+        </p>
+
+        <p>Upload Foto: <input type="file" name="file"></p>
+
+        <button type="button">Daftar</button>
+    </div>
+</body>
+
+</html>

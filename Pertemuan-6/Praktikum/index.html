@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sederhana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2rem;
+        }
+
+        .kalkulator {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        input, select, button {
+            padding: 0.5rem;
+            font-size: 1rem;
+        }
+
+        #hasil {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Kalkulator</h2>
+
+    <div class="kalkulator">
+        <input type="number" id="num1" placeholder="Angka pertama">
+        <input type="number" id="num2" placeholder="Angka kedua">
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">−</option>
+            <option value="*">×</option>
+            <option value="/">÷</option>
+        </select>
+        <button onclick="hitung()">Hitung</button>
+    </div>
+
+    <p>Hasil: <span id="hasil"></span></p>
+
+    <script>
+        function hitung() {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let operator = document.getElementById("operator").value;
+            let hasil;
+
+            if (isNaN(num1) || isNaN(num2)) {
+                hasil = "Masukkan dua angka dulu yaa~";
+            } else {
+                switch (operator) {
+                    case "+":
+                        hasil = num1 + num2;
+                        break;
+                    case "-":
+                        hasil = num1 - num2;
+                        break;
+                    case "*":
+                        hasil = num1 * num2;
+                        break;
+                    case "/":
+                        hasil = num2 !== 0 ? num1 / num2 : "Ga bisa dibagi 0, Ca!";
+                        break;
+                }
+            }
+
+            document.getElementById("hasil").innerText = hasil;
+        }
+    </script>
+</body>
+</html>
