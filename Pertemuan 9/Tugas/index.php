@@ -1,7 +1,6 @@
 <?php
 define("PAJAK", 0.1);
 
-// Array harga barang
 $hargasatuan = array(
     "keyboard" => 150000,
     "mouse" => 50000
