@@ -82,3 +82,8 @@
    echo "Isi variabel data: ";
    var_dump($data);
 ?>
+
+<br>
+<a href="../../Pertemuan 10/Tugas1/latihan_nilai.php">Nilai Mahasiswa</a>
+<br>
+<a href="../../Pertemuan 10/Tugas2/index.php">Biaya UKT Mahasiswa</a>
